@@ -10,9 +10,15 @@ export const d10 = [1,2,3,4,5,6,7,8,9,10];
 export const d12 = [1,2,3,4,5,6,7,8,9,10,11,12];
 export const d20 = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
 
-export function makeRoll(dice) {
-    let roll = dice[Math.floor(Math.random()*dice.length)]
-    console.log(`Rolling ${dice} - ${roll}`)
+export function makeRoll(dice, numberOfDice) {
+    let result = []
+    for (let i = 0; i < numberOfDice; i++) {
+        let roll = dice[Math.floor(Math.random()*dice.length)]
+        console.log(`Rolling ${dice} - ${roll}`)
+        result.push(roll)
+    }
+    console.log(result)
 }
 
-makeRoll(d4);
+makeRoll(d6, 4);
+
