@@ -9,7 +9,9 @@ const DiceRoll =() => {
           <option value = "d6">d6</option>
         </select>
         <button type = "button">Submit</button>
-
+        <br></br>
+        <h3>Result</h3>
+        <div className = "diceRoll"></div>
     </div>
 
   )
